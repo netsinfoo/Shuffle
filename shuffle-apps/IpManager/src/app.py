@@ -20,9 +20,11 @@ class IpManager(AppBase):
                 
         consulta =  ipam.get('/addresses/search/'+ client_ip +'/')
         
-        info = "Deu Certo"
-        
-        return info
+        return consulta
+    
+    def testa_retorno(self, nome):
+        welcome = "Seja bem vindo ao shuffle " + nome
+        return welcome
         
 if __name__ == "__main__":
     IpManager.run()
